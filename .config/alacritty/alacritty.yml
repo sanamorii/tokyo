@@ -63,6 +63,7 @@ colors: *tokyo-night
 font: 
   normal:
     family: cherry
+  # size: 14
 window:
   title: Terminal
   dyanmic_title: true
