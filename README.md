@@ -19,5 +19,5 @@ UI: Inter
 Monospace: Cascadia Code, Iosevka, Sarasa Gothic (CKJ)
 Bitmap: cherry, wucon siji, ...
 
-**extra:**
+**extra:**  
 ```yay -S vim nvim git python python-pip gcc make valgrind nodejs jdk-openjdk ruby php ghcup-hs-bin```
