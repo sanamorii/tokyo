@@ -3,3 +3,5 @@ if status is-interactive
 end
 
 bind \co 'commandline ranger-cd; commandline -f execute'
+alias dotfiles='/usr/bin/git --git-dir=/home/sanamorii/.dotfiles/ --work-tree=/home/sanamorii'
+alias dotfiles_tracked='dotfiles ls-tree -r main --name-only'
