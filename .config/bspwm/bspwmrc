@@ -1,8 +1,9 @@
 #! /bin/sh
 
 pgrep -x sxhkd > /dev/null || sxhkd &
+xsetroot -cursor_name left_ptr &
 picom --experimental-backend --config ~/.config/picom/picom.conf &
-feh --bg-scale ~/.local/wallpaper/bocchi.jpg &
+feh --bg-scale ~/.local/wallpaper/wave.jpeg &
 flameshot &
 $HOME/.config/polybar/launch.sh &
 
