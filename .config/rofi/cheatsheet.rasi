@@ -1,0 +1,6 @@
+@theme "/home/sanamorii/.local/share/rofi/themes/tokyonight.rasi"
+
+window{
+    width: 800px;
+    height: 600px;
+}

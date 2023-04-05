@@ -1,21 +1,52 @@
+
+# SXHKD Cheatsheet
+super + k
+	sxhkd-cheat
+
+# Open clipboard
+super + i
+	rofi -modi "clipboard:greenclip print" -show clipboard -run-command '{cmd}'
+
+# Printscreen
 super + shift + s
 	flameshot gui
 
+# Change brightness
 {XF86MonBrightnessDown, XF86MonBrightnessUp}
 	brightnessctl set {5%-,+5%}
+
+# Change volume
 {XF86AudioLowerVolume, XF86AudioRaiseVolume}
 	pactl set-sink-volume @DEFAULT_SINK@ {-5%,+5%}
+
+# Mute volume
 XF86AudioMute 
 	pactl set-sink-mute @DEFAULT_SINK@ toggle
+
+# Mute microphone
 XF86AudioMicMute 
 	pactl set-source-mute @DEFAULT_SOURCE@ toggle
 
-
+# Power Menu
 super + p
 	rofi -show power-menu -modi power-menu:powermenu
-#
-# wm independent hotkeys
-#
+
+
+# add to tabbed container
+ctrl + alt + {Left,Down,Up,Right}
+    tabc attach $(bspc query -N -n) {$(bspc query -N -n west),$(bspc query -N -n south),$(bspc query -N -n north),$(bspc query -N -n east)}
+
+# create/remove from tabbed container
+super + z 
+    set id $(bspc query -N -n); \
+    [ (tabc printclass $id) = "tabbed" ] \
+    && tabc detach $id \
+    || tabc create $id;
+
+# toggle autoattach in tabbed container
+super + shift + z 
+    tabc autoattach $(bspc query -N -n) 
+
 
 # terminal emulator
 super + Return

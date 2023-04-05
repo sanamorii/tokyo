@@ -2,6 +2,7 @@
 
 pgrep -x sxhkd > /dev/null || sxhkd &
 xsetroot -cursor_name left_ptr &
+greenclip daemon &
 picom --experimental-backend --config ~/.config/picom/picom.conf &
 feh --bg-scale ~/.local/wallpaper/wave.jpeg &
 flameshot &
