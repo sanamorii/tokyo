@@ -1,10 +1,10 @@
 
 # SXHKD Cheatsheet
-super + k
+super + i
 	sxhkd-cheat
 
 # Open clipboard
-super + i
+super + o
 	rofi -modi "clipboard:greenclip print" -show clipboard -run-command '{cmd}'
 
 # Printscreen
@@ -12,19 +12,23 @@ super + shift + s
 	flameshot gui
 
 # Change brightness
-{XF86MonBrightnessDown, XF86MonBrightnessUp}
-	brightnessctl set {5%-,+5%}
+XF86MonBrightnessDown
+	volume_brightness brightness_down
+XF86MonBrightnessUp
+	volume_brightness brightness_up
 
 # Change volume
-{XF86AudioLowerVolume, XF86AudioRaiseVolume}
-	pactl set-sink-volume @DEFAULT_SINK@ {-5%,+5%}
+XF86AudioLowerVolume
+	volume_brightness volume_down
+XF86AudioRaiseVolume
+	volume_brightness volume_up
 
 # Mute volume
 XF86AudioMute 
 	pactl set-sink-mute @DEFAULT_SINK@ toggle
 
 # Mute microphone
-XF86AudioMicMute 
+XF86AudioMicMute
 	pactl set-source-mute @DEFAULT_SOURCE@ toggle
 
 # Power Menu
